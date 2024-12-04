@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Criar Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    {% block content %}{% endblock %}
+    
+    <footer>
+        <p>&copy; 2024 Meu Site</p>
+    </footer>
+</body>
+</html>
